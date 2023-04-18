@@ -6,6 +6,9 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 
 const Header = () => {
+
+
+    // className={({ isActive }) => isActive ? "  nav-link active fw-bolder"  : "nav-link"}
     return (
         <>
             <div className='my-3 text-center'>
@@ -28,13 +31,13 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mx-auto mb-2 text-secondary mb-lg-0">
                                 <li className="nav-item">
-                                    <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                                    <NavLink className={({ isActive }) => isActive ? "  nav-link active fw-bolder text-primary" : "nav-link"} aria-current="page" to="/">Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link active" aria-current="page" to="/about">about</NavLink>
+                                    <NavLink className={({ isActive }) => isActive ? "  nav-link active fw-bolder text-primary" : "nav-link"} aria-current="page" to="/about">about</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link active" aria-current="page" to="/career">career</NavLink>
+                                    <NavLink className={({ isActive }) => isActive ? "  nav-link active fw-bolder text-primary" : "nav-link"} aria-current="page" to="/career">career</NavLink>
                                 </li>
                             </ul>
 
